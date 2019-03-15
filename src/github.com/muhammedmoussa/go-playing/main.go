@@ -33,13 +33,41 @@ func main() {
 	// fmt.Println(getSum(70, 4))
 
 	// Arrays
-	var fruitArray [2]string
-	fruitArray[0] = "Apple"
-	fruitArray[1] = "Orange"
-	nameArray := [2]string{"Muhammed", "Moussa"}
+	// var fruitArray [2]string
+	// fruitArray[0] = "Apple"
+	// fruitArray[1] = "Orange"
+	// nameArray := [2]string{"Muhammed", "Moussa"}
 
-	langSlice := []string{"Js", "C++", "Python"}
+	// langSlice := []string{"Js", "C++", "Python"}
 
-	fmt.Println(fruitArray, nameArray)
-	fmt.Println(langSlice)
+	// fmt.Println(fruitArray, nameArray)
+	// fmt.Println(langSlice)
+
+	// Conditions
+	x := 50
+	y := 10
+	color := "blue"
+
+	if x < y {
+		fmt.Printf("%d is less than %d\n", x, y)
+	} else {
+		fmt.Printf("%d is less than %d\n", y, x)
+	}
+
+	if color == "red" {
+		fmt.Println("Color is red")
+	} else if color == "blue" {
+		fmt.Println("Color is blue")
+	} else {
+		fmt.Println("Color undefined")
+	}
+
+	switch color {
+	case "red":
+		fmt.Println("Color is Red")
+	case "blue":
+		fmt.Println("Color is Blue")
+	default:
+		fmt.Println("Color is undefined")
+	}
 }
