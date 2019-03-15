@@ -44,30 +44,41 @@ func main() {
 	// fmt.Println(langSlice)
 
 	// Conditions
-	x := 50
-	y := 10
-	color := "blue"
+	// x := 50
+	// y := 10
+	// color := "blue"
 
-	if x < y {
-		fmt.Printf("%d is less than %d\n", x, y)
-	} else {
-		fmt.Printf("%d is less than %d\n", y, x)
+	// if x < y {
+	// 	fmt.Printf("%d is less than %d\n", x, y)
+	// } else {
+	// 	fmt.Printf("%d is less than %d\n", y, x)
+	// }
+
+	// if color == "red" {
+	// 	fmt.Println("Color is red")
+	// } else if color == "blue" {
+	// 	fmt.Println("Color is blue")
+	// } else {
+	// 	fmt.Println("Color undefined")
+	// }
+
+	// switch color {
+	// case "red":
+	// 	fmt.Println("Color is Red")
+	// case "blue":
+	// 	fmt.Println("Color is Blue")
+	// default:
+	// 	fmt.Println("Color is undefined")
+	// }
+
+	// i := 1
+	// for i <= 10 {
+	// 	fmt.Println(i)
+	// 	i++
+	// }
+
+	for i := 1; i <= 10; i++ {
+		fmt.Printf("num %d\n", i)
 	}
 
-	if color == "red" {
-		fmt.Println("Color is red")
-	} else if color == "blue" {
-		fmt.Println("Color is blue")
-	} else {
-		fmt.Println("Color undefined")
-	}
-
-	switch color {
-	case "red":
-		fmt.Println("Color is Red")
-	case "blue":
-		fmt.Println("Color is Blue")
-	default:
-		fmt.Println("Color is undefined")
-	}
 }
