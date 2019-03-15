@@ -28,7 +28,18 @@ func main() {
 	// fmt.Println(name, emial, isCool, size)
 	// fmt.Println(math.Sqrt(2))
 	// fmt.Printf("%T\n", age)
-	fmt.Println(greeting("muhammed"))
-	fmt.Println(getSum(70, 4))
 
+	// fmt.Println(greeting("muhammed"))
+	// fmt.Println(getSum(70, 4))
+
+	// Arrays
+	var fruitArray [2]string
+	fruitArray[0] = "Apple"
+	fruitArray[1] = "Orange"
+	nameArray := [2]string{"Muhammed", "Moussa"}
+
+	langSlice := []string{"Js", "C++", "Python"}
+
+	fmt.Println(fruitArray, nameArray)
+	fmt.Println(langSlice)
 }
