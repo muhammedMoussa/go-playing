@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 // var name = "Muhammed"
 
@@ -12,17 +15,43 @@ import "fmt"
 // // 	return num1 + num2
 // // }
 
-type Person struct {
-	name string
-	age  int
+/* STRUCTS */
+// type Person struct {
+// 	name string
+// 	age  int
+// }
+
+// func (p Person) greet() string {
+// 	return "Hellooo! " + p.name
+// }
+
+// func (p *Person) hasBirthday() {
+// 	p.age++
+// }
+
+/* INTERFACES */
+type Shape interface {
+	area() float64
 }
 
-func (p Person) greet() string {
-	return "Hellooo! " + p.name
+type Circle struct {
+	x, y, radius float64
 }
 
-func (p *Person) hasBirthday() {
-	p.age++
+type Rectangle struct {
+	width, height float64
+}
+
+func (c Circle) area() float64 {
+	return math.Pi * c.radius * c.radius
+}
+
+func (r Rectangle) area() float64 {
+	return r.height * r.width
+}
+
+func getArea(s Shape) float64 {
+	return s.area()
 }
 
 func main() {
@@ -132,11 +161,18 @@ func main() {
 	// fmt.Println(*b)
 
 	/* STRUCT */
-	person1 := Person{name: "Muhammed", age: 24}
-	person2 := Person{"Ahmed", 24}
-	fmt.Println(person1)
-	person2.age++
-	fmt.Println(person2.age)
-	person1.hasBirthday()
-	fmt.Println(person1.greet())
+	// person1 := Person{name: "Muhammed", age: 24}
+	// person2 := Person{"Ahmed", 24}
+	// fmt.Println(person1)
+	// person2.age++
+	// fmt.Println(person2.age)
+	// person1.hasBirthday()
+	// fmt.Println(person1.greet())
+
+	/* INTERFACES */
+	circle := Circle{0, 0, 5}
+	rectangle := Rectangle{10, 5}
+
+	fmt.Printf("Circle Area: %f\n: ", circle.area())
+	fmt.Print("Recangle Area: %f\n", rectangle.area())
 }
