@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"net/http"
 )
 
 // var name = "Muhammed"
@@ -29,29 +29,38 @@ import (
 // 	p.age++
 // }
 
-/* INTERFACES */
-type Shape interface {
-	area() float64
+// /* INTERFACES */
+// type Shape interface {
+// 	area() float64
+// }
+
+// type Circle struct {
+// 	x, y, radius float64
+// }
+
+// type Rectangle struct {
+// 	width, height float64
+// }
+
+// func (c Circle) area() float64 {
+// 	return math.Pi * c.radius * c.radius
+// }
+
+// func (r Rectangle) area() float64 {
+// 	return r.height * r.width
+// }
+
+// func getArea(s Shape) float64 {
+// 	return s.area()
+// }
+
+/* Network */
+func index(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "<h1>Hye From Go Server!</h1>")
 }
 
-type Circle struct {
-	x, y, radius float64
-}
-
-type Rectangle struct {
-	width, height float64
-}
-
-func (c Circle) area() float64 {
-	return math.Pi * c.radius * c.radius
-}
-
-func (r Rectangle) area() float64 {
-	return r.height * r.width
-}
-
-func getArea(s Shape) float64 {
-	return s.area()
+func about(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "<h1>GO Is Awesome!</h1>")
 }
 
 func main() {
@@ -170,9 +179,16 @@ func main() {
 	// fmt.Println(person1.greet())
 
 	/* INTERFACES */
-	circle := Circle{0, 0, 5}
-	rectangle := Rectangle{10, 5}
+	// circle := Circle{0, 0, 5}
+	// rectangle := Rectangle{10, 5}
 
-	fmt.Printf("Circle Area: %f\n: ", circle.area())
-	fmt.Print("Recangle Area: %f\n", rectangle.area())
+	// fmt.Printf("Circle Area: %f\n: ", circle.area())
+	// fmt.Print("Recangle Area: %f\n", rectangle.area())
+
+	/* Network */
+	http.HandleFunc("/", index)
+	http.HandleFunc("/about", about)
+
+	fmt.Println("Server Running...")
+	http.ListenAndServe(":3000", nil)
 }
