@@ -1,18 +1,16 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-var name = "Muhammed"
+// var name = "Muhammed"
 
-func greeting(name string) string {
-	return "Hello " + name
-}
+// // func greeting(name string) string {
+// // 	return "Hello " + name
+// // }
 
-func getSum(num1, num2 int) int {
-	return num1 + num2
-}
+// // func getSum(num1, num2 int) int {
+// // 	return num1 + num2
+// // }
 
 func main() {
 	// var name = "Muhammed"
@@ -77,8 +75,20 @@ func main() {
 	// 	i++
 	// }
 
-	for i := 1; i <= 10; i++ {
-		fmt.Printf("num %d\n", i)
-	}
+	// for i := 1; i <= 10; i++ {
+	// 	fmt.Printf("num %d\n", i)
+	// }
 
+	/* MAPS */
+	// emails := make(map[string]string)
+	// emails["muhammed"] = "muhammed@gmail.com"
+	// emails["ahmed"] = "ahmed@gmail.com"
+	emails := map[string]string{"muhammed": "muhammed@gmail.com", "ahmed": "ahmed@gmail.com"}
+
+	fmt.Println(emails)
+	fmt.Println(emails["muhammed"])
+	fmt.Println(len(emails))
+
+	delete(emails, "ahmed")
+	fmt.Println(len(emails))
 }
