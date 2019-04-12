@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // var name = "Muhammed"
 
 // // func greeting(name string) string {
@@ -93,22 +91,28 @@ func main() {
 	// fmt.Println(len(emails))
 
 	/* Range */
-	ids := []int{1, 2, 3, 4}
+	// ids := []int{1, 2, 3, 4}
 
-	for _, id := range ids {
-		fmt.Printf("ID: %d\n", id)
-	}
+	// for _, id := range ids {
+	// 	fmt.Printf("ID: %d\n", id)
+	// }
 
-	sum := 0
-	for _, id := range ids {
-		sum += id
-	}
+	// sum := 0
+	// for _, id := range ids {
+	// 	sum += id
+	// }
 
-	fmt.Println("SUM: ", sum)
-	emails := map[string]string{"muhammed": "muhammed@gmail.com", "ahmed": "ahmed@gmail.com"}
+	// fmt.Println("SUM: ", sum)
+	// emails := map[string]string{"muhammed": "muhammed@gmail.com", "ahmed": "ahmed@gmail.com"}
 
-	for v, k := range emails {
-		fmt.Printf("%s: %s\n", k, v)
-	}
+	// for v, k := range emails {
+	// 	fmt.Printf("%s: %s\n", k, v)
+	// }
 
+	/* POINTER */
+	// a := 5
+	// b := &a
+
+	// fmt.Println(a, b)
+	// fmt.Println(*b)
 }
