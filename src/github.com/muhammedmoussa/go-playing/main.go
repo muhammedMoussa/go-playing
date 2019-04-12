@@ -83,12 +83,32 @@ func main() {
 	// emails := make(map[string]string)
 	// emails["muhammed"] = "muhammed@gmail.com"
 	// emails["ahmed"] = "ahmed@gmail.com"
+	// emails := map[string]string{"muhammed": "muhammed@gmail.com", "ahmed": "ahmed@gmail.com"}
+
+	// fmt.Println(emails)
+	// fmt.Println(emails["muhammed"])
+	// fmt.Println(len(emails))
+
+	// delete(emails, "ahmed")
+	// fmt.Println(len(emails))
+
+	/* Range */
+	ids := []int{1, 2, 3, 4}
+
+	for _, id := range ids {
+		fmt.Printf("ID: %d\n", id)
+	}
+
+	sum := 0
+	for _, id := range ids {
+		sum += id
+	}
+
+	fmt.Println("SUM: ", sum)
 	emails := map[string]string{"muhammed": "muhammed@gmail.com", "ahmed": "ahmed@gmail.com"}
 
-	fmt.Println(emails)
-	fmt.Println(emails["muhammed"])
-	fmt.Println(len(emails))
+	for v, k := range emails {
+		fmt.Printf("%s: %s\n", k, v)
+	}
 
-	delete(emails, "ahmed")
-	fmt.Println(len(emails))
 }
