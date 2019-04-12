@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // var name = "Muhammed"
 
 // // func greeting(name string) string {
@@ -9,6 +11,19 @@ package main
 // // func getSum(num1, num2 int) int {
 // // 	return num1 + num2
 // // }
+
+type Person struct {
+	name string
+	age  int
+}
+
+func (p Person) greet() string {
+	return "Hellooo! " + p.name
+}
+
+func (p *Person) hasBirthday() {
+	p.age++
+}
 
 func main() {
 	// var name = "Muhammed"
@@ -115,4 +130,13 @@ func main() {
 
 	// fmt.Println(a, b)
 	// fmt.Println(*b)
+
+	/* STRUCT */
+	person1 := Person{name: "Muhammed", age: 24}
+	person2 := Person{"Ahmed", 24}
+	fmt.Println(person1)
+	person2.age++
+	fmt.Println(person2.age)
+	person1.hasBirthday()
+	fmt.Println(person1.greet())
 }
